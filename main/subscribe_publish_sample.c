@@ -310,7 +310,7 @@ void aws_iot_task(void *param) {
                         false, true, portMAX_DELAY);
 
     connectParams.keepAliveIntervalInSec = 10;
-    connectParams.isCleanSession = true;
+    connectParams.isCleanSession = false;
     connectParams.MQTTVersion = MQTT_3_1_1;
     /* Client ID is set in the menuconfig of the example */
     connectParams.pClientID = CONFIG_AWS_EXAMPLE_CLIENT_ID;
