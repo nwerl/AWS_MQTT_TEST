@@ -301,11 +301,10 @@ void aws_iot_task(void *param) {
 
     rc = aws_iot_mqtt_init(&client, &mqttInitParams);
     if(SUCCESS != rc) {
-        ESP_LOGE(TAG, "aws_iot_mqtt_init returned erorororor : %d ", rc);
+        ESP_LOGE(TAG, "aws_iot_mqtt_init returned error : %d ", rc);
         abort();
     }
 
-    /* ho */
     xEventGroupWaitBits(wifi_event_group, CONNECTED_BIT,
                         false, true, portMAX_DELAY);
 
